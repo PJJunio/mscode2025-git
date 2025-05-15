@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de cadastro</title>
+    <link rel="stylesheet" href="/AulaFormularioMSCODE/styles/RegisterFormCss.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Faça seu cadastro</legend>
+            <p>
+                <label for="registerEmail">
+                    <span>Digite seu email: </span>
+                    <input type="email" name="email" id="registerEmail_input" required>
+                </label>
+            </p>
+            <p>
+                <label for="registerPassword">
+                    <span>Digite sua senha: </span>
+                    <input type="text" name="password" id="registerPassword_input" required>
+                </label>
+            </p>
+            <p>
+                <label for="dateCheckbox">
+                    <span>Qual sua data de nascimento?</span>
+                    <input type="date" name="birthdate" id="birthdate_input">
+                </label>
+            </p>
+            <p>
+                <label for="locationList">
+                    <span>Selecionde seu estado</span>
+                    <select name="stateSelect" id="stateSelect">
+                        <option value="Selecione" selected>Selecione</option>
+                        <option value="ES">ES</option>
+                        <option value="BA">BA</option>
+                        <option value="MG">BA</option>
+                        <option value="MA">BA</option>
+                        <option value="AM">BA</option>
+                    </select>
+                </label>
+            </p>
+            <label for="registerTerms">
+                <input type="checkbox" name="acc_terms" id="registerAcc_terms" required>
+                <a href="Terms.html">Aceite os termos</a>
+            </label>
+            <p>
+                <button type="submit">Registre-se</button>
+            </p>
+            <p>
+                <span>Já tem uma conta?</span>
+                <a href="LoginForm.html">Faça login</a>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

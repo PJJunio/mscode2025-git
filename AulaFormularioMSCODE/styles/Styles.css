@@ -1,0 +1,11 @@
+
+.terms-div {
+    display: flex;
+    flex-direction: column; /* Para que os itens internos fiquem em coluna (título em cima do texto) */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.terms-text {
+    max-width: 75%;
+    white-space: wrap;
+}
