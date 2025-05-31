@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: rgb(28, 32, 135);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.siteTitle {
+    color: white;
+}
+
+.navBar {
+
+}
+
+.navBarList {
+    display: flex;
+    gap: 10vh;
+    list-style: none;
+}
+
+.navBarList a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.navBarList a:hover {
+    color: blue;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+    flex-wrap: wrap;
+}
+
+.search input {
+    font-size: large;
+    font-weight: bold;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 1vh;
+}
+
+.searchButton {
+    color: white;
+    background-color: rgb(108, 34, 140)
+    
+}
