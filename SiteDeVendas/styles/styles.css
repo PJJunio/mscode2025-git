@@ -1,9 +1,11 @@
-body {
+* {
     font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 header {
-    background-color: rgb(28, 32, 135);
+    background-color: #212039;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,12 +14,17 @@ header {
     justify-content: space-around;
 }
 
-.siteTitle {
-    color: white;
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
-.navBar {
+/*HEADER*/
 
+.siteTitle {
+    color: white;
 }
 
 .navBarList {
@@ -41,13 +48,11 @@ header {
     display: flex;
     align-items: center;
     gap: 2vh;
-    flex-wrap: wrap;
 }
 
 .search input {
     font-size: large;
     font-weight: bold;
-    height: 100%;
     border-radius: 5px;
     border: none;
     padding: 1vh;
@@ -55,6 +60,99 @@ header {
 
 .searchButton {
     color: white;
-    background-color: rgb(108, 34, 140)
+    background-color: #7E57B5;
     
+}
+
+
+/*HEROIMG*/
+
+.heroImg {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*PRODUCTS TABLE*/
+
+.productsTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.productsTable table th {
+    background-color: lightgray;
+    padding: 2vh;
+}
+
+.productsTable table td {
+    text-align: center;
+    padding: 2vh;
+}
+
+
+/*CONTACTFORM*/
+
+.formArticle {
+    display: flex;
+    font-size: large;
+    font-weight: bold;
+    padding: 1vh;
+}
+
+.formArticle label {
+    padding: 2vh;
+}
+
+.formArticle label input {
+    width: 100%;
+}
+
+.formButtom {
+    display: flex;
+    padding-top: 5vh;
+}
+
+.formButtom input{
+    background-color: #7E57B5;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    padding: 1vh;
+}
+
+/*CONTACTFORM*/
+
+footer {
+    background-color: #212039;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: auto;
+    padding-bottom: 2vh;
+}
+
+.socialMedia {
+    padding-bottom: 2vh;
+}
+
+.socialMedia ul {
+    display: flex;
+    list-style: none;
+    gap: 2vh;
+}
+
+.footerTitle {
+    text-align: center;
+    color: white;
+    padding: 2vh;
+}
+
+.socialMedia a {
+    text-decoration: none;
+    color: white;
 }
