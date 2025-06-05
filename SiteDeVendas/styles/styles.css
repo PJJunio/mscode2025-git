@@ -1,7 +1,12 @@
+/* Reset e Estilos Globais */
 * {
     font-family: sans-serif;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
 }
 
 header {
@@ -12,6 +17,7 @@ header {
     height: 10vh;
     align-items: center;
     justify-content: space-around;
+    padding: 0 15px;
 }
 
 main {
@@ -21,16 +27,24 @@ main {
     margin-right: 15px;
 }
 
-/*HEADER*/
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
 
-.siteTitle {
+/* --- HEADER --- */
+.siteTitle h1 {
     color: white;
+    font-size: 1.8em;
 }
 
 .navBarList {
     display: flex;
-    gap: 10vh;
+    gap: 20px;
     list-style: none;
+    padding-left: 0;
 }
 
 .navBarList a {
@@ -38,121 +52,207 @@ main {
     color: white;
     font-size: large;
     font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navBarList a:hover {
-    color: blue;
+    background-color: #7E57B5;
+    color: white;
 }
 
 .search {
     display: flex;
     align-items: center;
-    gap: 2vh;
+    gap: 10px;
 }
 
-.search input {
-    font-size: large;
-    font-weight: bold;
+.search input[type="text"] {
+    font-size: medium;
+    font-weight: normal;
     border-radius: 5px;
-    border: none;
-    padding: 1vh;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
 }
 
 .searchButton {
     color: white;
     background-color: #7E57B5;
-    
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+    background-color: #6a479e;
 }
 
 
-/*HEROIMG*/
-
+/* --- HERO IMAGE --- */
 .heroImg {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
+.heroImg img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
-/*PRODUCTS TABLE*/
+/* --- WELCOME TITLE & CATEGORIES --- */
+.welcomeTitle h2,
+.categoriesHead h2,
+.productsTable h2,
+.formArticleContainer h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.categoriesHead ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.categoriesHead ul li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+/* --- PRODUCTS TABLE --- */
+.productsTable {
+    margin-bottom: 30px;
+}
 
 .productsTable table {
     width: 100%;
     border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.productsTable table th,
+.productsTable table td {
+    text-align: center;
+    padding: 12px 15px;
 }
 
 .productsTable table th {
-    background-color: lightgray;
-    padding: 2vh;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333;
 }
 
 .productsTable table td {
     text-align: center;
-    padding: 2vh;
 }
 
+.productsTable table img {
+    border-radius: 4px;
+}
 
-/*CONTACTFORM*/
+/* --- CONTACT FORM --- */
+.formArticleContainer {
+    margin-bottom: 30px;
+}
 
-.formArticle {
-    display: flex;
+.contactForm p {
+    margin-bottom: 15px;
+}
+
+.contactForm label {
+    display: block;
     font-size: large;
     font-weight: bold;
-    padding: 1vh;
+    margin-bottom: 5px;
+    color: #555;
 }
 
-.formArticle label {
-    padding: 2vh;
-}
-
-.formArticle label input {
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.formButtom {
+.contactForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.formButtonContainer {
     display: flex;
-    padding-top: 5vh;
+    justify-content: flex-start;
+    padding-top: 10px;
 }
 
-.formButtom input{
+.formButtonContainer input[type="submit"] {
     background-color: #7E57B5;
+    color: white;
     font-size: large;
     font-weight: bold;
     border-radius: 5px;
     border: none;
-    padding: 1vh;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/*CONTACTFORM*/
+.formButtonContainer input[type="submit"]:hover {
+    background-color: #6a479e;
+}
 
+
+/* --- FOOTER --- */
 footer {
     background-color: #212039;
     color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    padding: auto;
-    padding-bottom: 2vh;
+    padding: 30px 15px;
+    text-align: center;
 }
 
-.socialMedia {
-    padding-bottom: 2vh;
+.footerTitle h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
 .socialMedia ul {
     display: flex;
     list-style: none;
-    gap: 2vh;
-}
-
-.footerTitle {
-    text-align: center;
-    color: white;
-    padding: 2vh;
+    gap: 15px;
+    padding-left: 0;
+    margin-bottom: 20px; 
 }
 
 .socialMedia a {
     text-decoration: none;
     color: white;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.socialMedia a:hover {
+    color: #aaa;
+}
+
+.copy p {
+    font-size: 0.9em;
+    color: #ccc;
 }

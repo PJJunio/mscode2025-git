@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendas Online</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
-
 <body>
     <header>
         <div class="siteTitle">
             <h1>Minha loja</h1>
         </div>
-        <div class="navBar">
-            <nav>
-                <ul class="navBarList">
-                    <li><a href="#header">Inicio</a></li>
-                    <li><a href="#products">Produtos</a></li>
-                    <li><a href="#categories">Categorias</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navBar">
+            <ul class="navBarList">
+                <li><a href="#header">Início</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#categories">Categorias</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
         <div class="search">
-            <input type="text">
+            <input type="text" placeholder="Buscar produtos...">
             <input type="button" value="Buscar" class="searchButton">
         </div>
     </header>
 
-    <hr>
-
     <main>
         <div class="welcomeTitle">
-            <h2>Bem-vindo a nossa loja!</h2>
+            <h2>Bem-vindo à nossa loja!</h2>
         </div>
         <div class="heroImg">
-            <img src="img/testimg.jpg" alt="testImg" width="40%">
+            <img src="img/testimg.jpg" alt="Imagem promocional da loja" style="width: 60%; max-width: 800px;">
         </div>
 
-        <section>
-            <div class="cateforiesHead" id="categories">
+        <section class="categoriesSection">
+            <div class="categoriesHead" id="categories">
                 <h2>Categorias</h2>
                 <ul>
                     <li>Roupas</li>
-                    <li>Eletônicos</li>
-                    <li>Livors</li>
-                    <li>Acessorios</li>
+                    <li>Eletrônicos</li>
+                    <li>Livros</li>
+                    <li>Acessórios</li>
                 </ul>
             </div>
+        </section>
 
-            <article class="productsTable" id="products">
+        <section class="productsSection" id="products">
+            <article class="productsTable">
                 <div>
                     <h2>Nossos Produtos</h2>
                     <table border="1">
@@ -65,60 +61,57 @@
                             <tr>
                                 <td>Café Expresso</td>
                                 <td>R$ 3,50</td>
-                                <td><img src="img/coffe1.jpg" alt="coffe1" height="100px" width="100px">
+                                <td>
+                                    <img src="img/coffe1.jpg" alt="Xícara de café expresso" height="100px" width="100px">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Capuccino</td>
+                                <td>Cappuccino</td>
                                 <td>R$ 4,50</td>
-                                <td><img src="img/coffe2.webp" alt="coffe2" height="100px" width="100px">
+                                <td>
+                                    <img src="img/coffe2.webp" alt="Xícara de cappuccino" height="100px" width="100px">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Mini Bolo</td>
                                 <td>R$ 10,50</td>
-                                <td><img src="img//candy1.jpeg" alt="candy1" height="100px" width="100px">
+                                <td>
+                                    <img src="img/candy1.jpeg" alt="Mini bolo decorado" height="100px" width="100px">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </article>
+        </section>
 
-            <article>
+        <section class="contactSection" id="contact">
+            <article class="formArticleContainer">
                 <h2>Fale Conosco</h2>
-                <div class="formArticle" id="contact">
-                    <form action="" class="contactForm">
+                <div class="formWrapper">
+                    <form action="#" method="POST" class="contactForm">
                         <p>
-                            <label for="name">
-                                <p>Nome:</p>
-                                <input type="text" name="name" id="">
-                            </label>
+                            <label for="name">Nome:</label>
+                            <input type="text" name="name" id="name" required>
                         </p>
 
                         <p>
-                            <label for="email">
-                                <p>Email:</p>
-                                <input type="email" name="" id="">
-                            </label>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
                         </p>
 
                         <p>
-                            <label for="subject">
-                                <p>Assunto:</p>
-                                <input type="text" name="name" id="">
-                            </label>
+                            <label for="subject">Assunto:</label>
+                            <input type="text" name="subject" id="subject" required>
                         </p>
 
                         <p>
-                            <label for="message">
-                                <p>Mensagem:</p>
-                                <textarea name="" id="" cols="50" rows="5" style="resize: none;"></textarea>
-                            </label>
+                            <label for="message">Mensagem:</label>
+                            <textarea name="message" id="message" cols="50" rows="5" required></textarea>
                         </p>
-                        <p class="formButtom">
+                        <div class="formButtonContainer">
                             <input type="submit" value="Enviar">
-                        </p>
+                        </div>
                     </form>
                 </div>
             </article>
@@ -131,16 +124,15 @@
         </div>
         <div class="socialMedia">
             <ul>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">X</a></li>
-                <li><a href="">Linkedin</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
         </div>
 
         <div class="copy">
-            <p>© 2025 Minha Loja. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
-
 </html>
