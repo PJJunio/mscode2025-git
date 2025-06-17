@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraJS</title>
+    <link rel="stylesheet" href="/CalculadoraJS/styles/styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="corpoCalc">
+            <form>
+                <div>
+                    <p>
+                        <span>1° número:</span>
+                    </p>
+                    <p>
+                        <label for="num1">
+                            <input type="number" name="num1" id="num1_input">
+                        </label>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>2° número:</span>
+                    </p>
+                    <p>
+                        <label for="num2">
+                            <input type="number" name="num2" id="num2_input">
+                        </label>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span>Operação</span>
+                    </p>
+                    <p>
+                        <label for="submitButton">
+                            <input type="button" value="+" id="mais">
+                            <input type="button" value="-" id="menos">
+                        </label>
+                    </p>
+                </div>
+                <div>
+                    <h2>Resultado</h2>
+                    <output id="resultArea" name="resultado" for="num1_input num2_input" role="status"></output>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="/CalculadoraJS/js/script.js"></script>
+</body>
+
+</html>
