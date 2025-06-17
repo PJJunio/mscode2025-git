@@ -40,5 +40,5 @@ function subtrair() {
 }
 
 
-
+somaBtn.addEventListener("click", () => somar());
 subBtn.addEventListener("click", () => subtrair());
