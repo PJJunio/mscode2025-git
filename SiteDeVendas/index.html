@@ -1,138 +1,597 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendas Online</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
     <header>
-        <div class="siteTitle">
-            <h1>Minha loja</h1>
-        </div>
-        <nav class="navBar">
-            <ul class="navBarList">
-                <li><a href="#header">Início</a></li>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#categories">Categorias</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-2" href="index.html">Minha loja</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav justify-content-around flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link text-white fs-5" href="#">Início</a></li>
+                        <li class="nav-item"><a class="nav-link text-white fs-5" href="#areaDeProdutos">Produtos</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white fs-5" href="#areaDeCategorias">Categorias</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white fs-5" href="#areaDeContato">Contato</a></li>
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input class="form-control me-sm-2" type="text" placeholder="Buscar produtos..." />
+                        <button class="btn my-2 my-sm-0 mx-2 bg-primary text-white" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
         </nav>
-        <div class="search">
-            <input type="text" placeholder="Buscar produtos...">
-            <input type="button" value="Buscar" class="searchButton">
-        </div>
     </header>
-
     <main>
-        <div class="welcomeTitle">
-            <h2>Bem-vindo à nossa loja!</h2>
-        </div>
-        <div class="heroImg">
-            <img src="./img/testimg.jpg" alt="Imagem promocional da loja" style="width: 60%; max-width: 800px;">
+        <!-- Categorias -->
+        <div class="container mt-5" id="areaDeCategorias">
+            <div class="row text-center d-flex justify-content-between">
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="#" class="text-decoration-none text-dark category-link">
+                        <div class="category-icon rounded-circle d-flex justify-content-center align-items-center">
+                            <img src="./img/bebidas.jpg" alt="bebidas">
+                        </div>
+                        <h6 class="mt-2 fw-semibold">Bebidas</h6>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="#" class="text-decoration-none text-dark category-link">
+                        <div class="category-icon rounded-circle d-flex justify-content-center align-items-center">
+                            <img src="./img/comidas.jpeg" alt="comidas">
+                        </div>
+                        <h6 class="mt-2 fw-semibold">Comidas</h6>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="#" class="text-decoration-none text-dark category-link">
+                        <div class="category-icon rounded-circle d-flex justify-content-center align-items-center">
+                            <img src="./img/livros.png" alt="Máquina de Lavar">
+                        </div>
+                        <h6 class="mt-2 fw-semibold">Livros</h6>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="#" class="text-decoration-none text-dark category-link">
+                        <div class="category-icon rounded-circle d-flex justify-content-center align-items-center">
+                            <img src="./img/insumos.png" alt="insumos">
+                        </div>
+                        <h6 class="mt-2 fw-semibold">Insumos</h6>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <section class="categoriesSection">
-            <div class="categoriesHead" id="categories">
-                <h2>Categorias</h2>
-                <ul>
-                    <li>Roupas</li>
-                    <li>Eletrônicos</li>
-                    <li>Livros</li>
-                    <li>Acessórios</li>
-                </ul>
+        <!-- Destaques -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center my-5">Destaques!</h1>
+                    <div id="carouselHighlights" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-5" style="height: 450px;">
+                            <div class="carousel-item active">
+                                <img src="./img/testimg.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/testimg.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/testimg.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHighlights"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHighlights"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Avaliações -->
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-5 text-center">O que nossos clientes dizem</h3>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 p-3 shadow-sm">
+                            <div class="card-body d-flex flex-column text-center">
+                                <img src="./img/peaples/pessoa1.png" class="rounded-circle mx-auto mb-3"
+                                    alt="Avatar Ana" style="width: 60px; height: 60px; object-fit: cover;">
+
+                                <div class="mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                </div>
+                                <p class="card-text flex-grow-1 text-muted">"Produtos de excelente qualidade e
+                                    atendimento impecável! farei mais compras."</p>
+                                <h5 class="fw-bold mt-auto text-dark">- Ana Paula S.</h5>
+                                <small class="text-muted">Avaliado em 25 de Junho de 2024</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 p-3 shadow-sm">
+                            <div class="card-body d-flex flex-column text-center">
+                                <img src="./img/peaples/pessoa2.png" class="rounded-circle mx-auto mb-3"
+                                    alt="Avatar João" style="width: 60px; height: 60px; object-fit: cover;">
+                                <div class="mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <p class="card-text flex-grow-1 text-muted">"Melhor café que já experimentei! O
+                                    ambiente
+                                    da loja é muito agradável e o serviço, rápido. Virei cliente fiel!"</p>
+                                <h5 class="fw-bold mt-auto text-dark">- Ana Akita</h5>
+                                <small class="text-muted">Avaliado em 20 de Junho de 2024</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 p-3 shadow-sm">
+                            <div class="card-body d-flex flex-column text-center">
+                                <img src="./img/peaples/pessoa3.png" class="rounded-circle mx-auto mb-3"
+                                    alt="Avatar Maria" style="width: 60px; height: 60px; object-fit: cover;">
+                                <div class="mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </div>
+                                <p class="card-text flex-grow-1 text-muted">"Adorei a variedade de produtos. Tive um
+                                    pequeno problema com a entrega, mas foi rapidamente resolvido pelo suporte.
+                                    Recomendo!"</p>
+                                <h5 class="fw-bold mt-auto text-dark">- João Marcos O.</h5>
+                                <small class="text-muted">Avaliado em 18 de Junho de 2024</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="productsSection" id="products">
-            <article class="productsTable">
-                <div>
-                    <h2>Nossos Produtos</h2>
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Valor</th>
-                                <th>Foto</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Café Expresso</td>
-                                <td>R$ 3,50</td>
-                                <td>
-                                    <img src="./img/coffe1.jpg" alt="Xícara de café expresso" height="100px" width="100px">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Cappuccino</td>
-                                <td>R$ 4,50</td>
-                                <td>
-                                    <img src="./img/coffe2.webp" alt="Xícara de cappuccino" height="100px" width="100px">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Mini Bolo</td>
-                                <td>R$ 10,50</td>
-                                <td>
-                                    <img src="./img/candy1.jpeg" alt="Mini bolo decorado" height="100px" width="100px">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </article>
-        </section>
+        <!-- Area de produtos -->
+        <div class="container" id="areaDeProdutos">
 
-        <section class="contactSection" id="contact">
-            <article class="formArticleContainer">
-                <h2>Fale Conosco</h2>
-                <div class="formWrapper">
-                    <form action="#" method="POST" class="contactForm">
-                        <p>
-                            <label for="name">Nome:</label>
-                            <input type="text" name="name" id="name" required>
-                        </p>
-
-                        <p>
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" required>
-                        </p>
-
-                        <p>
-                            <label for="subject">Assunto:</label>
-                            <input type="text" name="subject" id="subject" required>
-                        </p>
-
-                        <p>
-                            <label for="message">Mensagem:</label>
-                            <textarea name="message" id="message" cols="50" rows="5" required></textarea>
-                        </p>
-                        <div class="formButtonContainer">
-                            <input type="submit" value="Enviar">
+            <!-- Bebidas -->
+            <section class="pt-5 pb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="mb-3">Bebidas</h3>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary me-2 carousel-control-prev-custom" type="button"
+                            data-bs-target="#carouselBebidas" data-bs-slide="prev">
+                            <i class="bi bi-arrow-left"></i> </button>
+                        <button class="btn btn-primary carousel-control-next-custom" type="button"
+                            data-bs-target="#carouselBebidas" data-bs-slide="next">
+                            <i class="bi bi-arrow-right"></i> </button>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselBebidas" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 1"
+                                                    src="./img/products/drinks/classico.png">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 1</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 1.299,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 2"
+                                                    src="./img/products/drinks/expresso.png">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 2</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 899,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 3"
+                                                    src="./img/products/drinks/late.png">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 3</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 549,90</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </article>
+            </section>
+
+            <!-- Comidas -->
+            <section class="pt-5 pb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="mb-3">Comidas</h3>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary me-2 carousel-control-prev-custom" type="button"
+                            data-bs-target="#carouselComidas" data-bs-slide="prev">
+                            <i class="bi bi-arrow-left"></i> </button>
+                        <button class="btn btn-primary carousel-control-next-custom" type="button"
+                            data-bs-target="#carouselComidas" data-bs-slide="next">
+                            <i class="bi bi-arrow-right"></i> </button>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselComidas" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 1"
+                                                    src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 1</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 1.299,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 2"
+                                                    src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDM0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 2</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 899,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 3"
+                                                    src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 3</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 549,90</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Banner Novidade de livros -->
+            <div style="height: 200px;">
+                <img src="./img/testimg.jpg" class="d-block w-100 h-100 object-fit-cover rounded-5" alt="...">
+            </div>
+
+            <!-- Livros -->
+            <section class="pt-5 pb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="mb-3">Livros</h3>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary me-2 carousel-control-prev-custom" type="button"
+                            data-bs-target="#carouselLivros" data-bs-slide="prev">
+                            <i class="bi bi-arrow-left"></i> </button>
+                        <button class="btn btn-primary carousel-control-next-custom" type="button"
+                            data-bs-target="#carouselLivros" data-bs-slide="next">
+                            <i class="bi bi-arrow-right"></i> </button>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselLivros" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 1"
+                                                    src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 1</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 1.299,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 2"
+                                                    src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 2</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 899,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 3"
+                                                    src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 3</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 549,90</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Insumos -->
+            <section class="pt-5 pb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="mb-3">Insumos</h3>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary me-2 carousel-control-prev-custom" type="button"
+                            data-bs-target="#carouselInsumos" data-bs-slide="prev">
+                            <i class="bi bi-arrow-left"></i> </button>
+                        <button class="btn btn-primary carousel-control-next-custom" type="button"
+                            data-bs-target="#carouselInsumos" data-bs-slide="next">
+                            <i class="bi bi-arrow-right"></i> </button>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselInsumos" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 1"
+                                                    src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 1</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 1.299,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 2"
+                                                    src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 2</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 899,99</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100">
+                                                <img class="img-fluid card-img-top" alt="Imagem do Produto 3"
+                                                    src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h4 class="card-title">Nome do Produto 3</h4>
+                                                    <p class="card-text">Breve descrição do produto ou seus benefícios.
+                                                        Aqui você pode adicionar mais detalhes sobre o item à venda.</p>
+                                                    <div class="mt-auto">
+                                                        <h5 class="fw-bold mb-2">R$ 549,90</h5>
+                                                        <a href="#" class="btn btn-custom-buy w-100 mb-2">Comprar
+                                                            Agora</a>
+                                                        <a href="#" class="btn btn-outline-custom-add w-100">Adicionar
+                                                            ao Carrinho</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contato -->
+        <section class="py-5 bg-light" id="areaDeContato">
+            <div class="container">
+                <div class="row justify-content-end d-flex justify-content-around align-items-center">
+                    <div class="col-md-6">
+                        <h3 class="mb-4 text-center">Entre em Contato</h3>
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Seu nome completo"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail"
+                                    placeholder="seu.email@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputSubject" class="form-label">Assunto</label>
+                                <input type="text" class="form-control" id="inputSubject"
+                                    placeholder="Motivo do seu contato">
+                            </div>
+                            <div class="mb-3">
+                                <label for="textAreaMessage" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="textAreaMessage" rows="5"
+                                    placeholder="Escreva sua mensagem aqui..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-custom-send w-100">Enviar Mensagem</button>
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <p class="mb-3">Que tal um delivery? Peça usando nosso Whatsapp!</p>
+                            <a href="https://api.whatsapp.com/send?phone=SEUNUMERO&text=Olá!%20Gostaria%20de%20mais%20informações."
+                                class="btn btn-whatsapp w-100 d-flex align-items-center justify-content-center"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp me-2 fs-4"></i> Fale Conosco pelo WhatsApp
+                            </a>
+                            <small class="text-muted mt-2 d-block">Clique para abrir o WhatsApp</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footerTitle">
-            <h2>Redes Sociais</h2>
-        </div>
-        <div class="socialMedia">
-            <ul>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
-        </div>
-
-        <div class="copy">
-            <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+    <footer class="customBackgroundFooter">
+        <div class="container">
+            <footer class="py-3 my-4">
+                <h2 class="text-white text-center">Fale conosco</h2>
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"></i><a href="#" class="nav-link px-2 text-white"></i>Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white"><i
+                                class="bi bi-instagram link-light px-2"></i>Instagram</a></li>
+                    <li class="nav-item"></i><a href="#" class="nav-link px-2 text-white"><i
+                                class="bi bi-twitter-x link-light px-2"></i>Twitter</a></li>
+                    <li class="nav-item"></i><a href="#" class="nav-link px-2 text-white"><i
+                                class="bi bi-whatsapp link-light px-2"></i>Whatsapp</a></li>
+                </ul>
+                <p class="text-center text-white">© 2025 Paulo Dias</p>
+            </footer>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
